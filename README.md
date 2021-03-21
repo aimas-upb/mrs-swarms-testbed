@@ -2,7 +2,7 @@
 
 ## How to Use
 This package depends on following packages:  
-`sudo apt install ros-melodic-turtlebot*`  
+`sudo apt install ros-melodic-turtlebot3*`  
 `sudo apt install ros-melodic-teleop-twist-keyboard` 
 
 For launching, in one terminal:  
