@@ -1,4 +1,11 @@
 <launch>
+  <env name="TURTLEBOT3_MODEL" value="burger" />
+
+ <!-- launch a teleop node -->
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen">
+    <remap from="cmd_vel" to="robot1/cmd_vel"/>
+  </node>
+
   <param name="robot_description"
     command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_burger.urdf.xacro" />
 
@@ -10,6 +17,7 @@
       <arg name="robot_name"  value="Robot1" />
     </include>
   </group>
+
 
   <!-- BEGIN ROBOT 2-->
   <group ns="robot2">
